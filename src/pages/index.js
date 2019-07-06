@@ -62,6 +62,10 @@ export default () => {
     ]
     return (
         <React.Fragment>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Portfolio</title>
+            </Helmet>
             <style jsx>{`
                 .card {
                     width: 20rem;
