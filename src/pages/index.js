@@ -31,8 +31,8 @@ export default () => {
             title: "HackerNews",
             desciption: "React-Bootstrap, fetch, soon: Axios, graphQL",
             github: "https://github.com/JesseHenson/hacker-news",
-            example: "https://not-your-average-todo.netlify.com/",
-            disabled: true,
+            example: "https://hackernews-with-profiles.netlify.com/",
+            disabled: false,
             details: {
                 text: "Future plans include, connections to graphQL, ability to leave comments, sign in, favorite newsStories and users, search by users... so much more"
             }
