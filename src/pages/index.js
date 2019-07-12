@@ -19,8 +19,8 @@ export default () => {
             image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
             title: "Tech Blog",
             desciption: "Right now pretty bare. I'm going to redo in gatsby using config to build pages from markdown in site files",
-            github: "https://github.com/JesseHenson/Techs_guide_to_the_Galaxy",
-            example: "https://techs-guide-to-the-galaxy.netlify.com/",
+            github: "https://github.com/JesseHenson/-React-ions-blog",
+            example: "https://reactions-blog.netlify.com/",
             disabled: false,
             details: {
                 text: "Looking to completely redo with gatsby, graphQL and bootstrap"
