@@ -4,10 +4,9 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import Typography from "@material-ui/core/Typography"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
-import Box from "@material-ui/core/Box"
-import Container from "@material-ui/core/Container"
 import Slide from "@material-ui/core/Slide"
-import { makeStyles } from "@material-ui/core"
+import { makeStyles, Button } from "@material-ui/core"
+import { Link } from "gatsby"
 
 function HideOnScroll(props) {
   const { children, window } = props
@@ -36,6 +35,9 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     backgroundColor: theme.palette.primary,
   },
+  link: {
+    color: theme.palette.common.white,
+  },
 }))
 
 export default function HideAppBar(props) {
@@ -46,6 +48,12 @@ export default function HideAppBar(props) {
         <AppBar>
           <Toolbar className={classes.toolbar}>
             <Typography variant="h6">Jesse Henson</Typography>
+            <div style={{ flex: 1 }} />
+            <Button variant="outlined" color="secondary">
+              <Link style={{ textDecoration: "none" }} to="/about">
+                <Typography className={classes.link}>About</Typography>
+              </Link>
+            </Button>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

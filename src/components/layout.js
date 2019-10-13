@@ -11,14 +11,23 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import { CssBaseline, createMuiTheme } from "@material-ui/core"
+import { CssBaseline, createMuiTheme, Box, makeStyles } from "@material-ui/core"
 import { ThemeProvider } from "@material-ui/styles"
+import BottomAppBar from "./bottomNav"
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
     primary: { main: "#343a40" },
+    secondary: { main: "#8C7856" },
   },
 })
+
+const useStyles = makeStyles(theme => ({
+  app: {
+    minHeight: "100vh",
+    overflowX: "hidden",
+  },
+}))
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,12 +39,15 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  const classes = useStyles()
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
+        <Box className={classes.app}>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {children}
+          <BottomAppBar />
+        </Box>
       </CssBaseline>
     </ThemeProvider>
   )
