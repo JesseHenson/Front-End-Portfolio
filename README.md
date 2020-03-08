@@ -1,3 +1,8 @@
+# Current Portfolio
+
+1. Uses Gatsby, Material 
+2. Showcases my current projects 
+
 # Plan
 
 1. Use Json file and transformer for data file as project source
