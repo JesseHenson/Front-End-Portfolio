@@ -5,7 +5,6 @@ import Layout, { theme } from "../components/layout"
 import { Grid, makeStyles, CssBaseline, Paper } from "@material-ui/core"
 import MediaCard from "../components/card"
 import { ThemeProvider } from "@material-ui/styles"
-import reducer, { initialState } from "../components/reducer"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 
 const useStyles = makeStyles(theme => ({
