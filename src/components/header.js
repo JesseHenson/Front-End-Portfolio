@@ -68,7 +68,7 @@ export default function HideAppBar(props) {
             {searchBarShowing ? (
               <TextField
                 value={state.searchTerm}
-                placeholder="search title or tag (i.e. react, redux)"
+                placeholder="search title "
                 onChange={e =>
                   dispatch({
                     type: "searchInputChanged",

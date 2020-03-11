@@ -40,7 +40,12 @@ export default function MediaCard({ project }) {
           />
         </a>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
             {project.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">

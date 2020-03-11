@@ -38,6 +38,9 @@ export const query = graphql`
 export default ({ data }) => {
   const classes = useStyles()
   const state = useContext(GlobalStateContext)
+  const searchTerm = state.searchTerm.toLowerCase()
+  const titleFilter = project =>
+    project.node.title.toLowerCase().includes(searchTerm)
 
   return (
     <ThemeProvider theme={theme}>
@@ -55,15 +58,7 @@ export default ({ data }) => {
             spacing={10}
           >
             {data.allCardInfoJson.edges
-              .filter(
-                project =>
-                  project.node.title
-                    .toLowerCase()
-                    .includes(state.searchTerm.toLowerCase()) ||
-                  project.node.tags.some(tag =>
-                    tag.toLowerCase().includes(state.searchTerm.toLowerCase())
-                  )
-              )
+              .filter(titleFilter)
               .map((project, index) => (
                 <Grid
                   key={`${project.title}-${index}`}
