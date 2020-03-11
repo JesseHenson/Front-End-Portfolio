@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useReducer } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -14,11 +14,14 @@ import "./layout.css"
 import { CssBaseline, createMuiTheme, Box, makeStyles } from "@material-ui/core"
 import { ThemeProvider } from "@material-ui/styles"
 import BottomAppBar from "./bottomNav"
+import reducer, { initialState } from "./reducer"
+import Footer from "./footer"
 
 export const theme = createMuiTheme({
   palette: {
     primary: { main: "#343a40" },
     secondary: { main: "#8C7856" },
+    text: { primary: "#F0FFF0" },
   },
 })
 
@@ -39,14 +42,15 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
   const classes = useStyles()
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <Box className={classes.app}>
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header />
           {children}
-          <BottomAppBar />
+          <Footer />
         </Box>
       </CssBaseline>
     </ThemeProvider>

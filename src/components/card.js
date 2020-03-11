@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   cardActionArea: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
   },
 }))
 
@@ -32,11 +32,13 @@ export default function MediaCard({ project }) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={project.image}
-          title="Contemplative Reptile"
-        />
+        <a href={project.example} target="blank">
+          <CardMedia
+            className={classes.media}
+            image={project.image}
+            title="Contemplative Reptile"
+          />
+        </a>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {project.title}
@@ -47,35 +49,22 @@ export default function MediaCard({ project }) {
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.cardActionArea}>
-        <Button
-          className={classes.button}
-          component="a"
-          href={project.github}
-          size="small"
-          color="primary"
-        >
-          Github
-        </Button>
-        <Button
-          className={classes.button}
-          component="a"
-          href={project.example}
-          disabled={project.disabled}
-          size="small"
-          color="primary"
-          variant="contained"
-        >
-          Example
-        </Button>
-        <Button
-          component="a"
-          href="#"
-          size="small"
-          color="primary"
-          className={classes.button}
-        >
-          Details
-        </Button>
+        <a href={project.github} target="blank">
+          <Button className={classes.button} size="small" color="primary">
+            Github
+          </Button>
+        </a>
+        <a href={project.example}>
+          <Button
+            className={classes.button}
+            disabled={project.disabled}
+            size="small"
+            color="primary"
+            variant="contained"
+          >
+            Example
+          </Button>
+        </a>
       </CardActions>
     </Card>
   )

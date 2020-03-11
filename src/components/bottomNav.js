@@ -69,9 +69,7 @@ export default function BottomAppBar() {
             <AddIcon />
           </Fab>
           <div className={classes.grow} />
-          <IconButton color="inherit">
-            <SearchIcon />
-          </IconButton>
+
           <IconButton edge="end" color="inherit">
             <MoreIcon />
           </IconButton>

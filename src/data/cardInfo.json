@@ -8,7 +8,8 @@
     "disabled": false,
     "details": {
       "text": "Sorting, filtering, searching capabilities. Will have auth and a way to save todos."
-    }
+    },
+    "tags": ["react", "redux", "css"]
   },
   {
     "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
@@ -19,7 +20,8 @@
     "disabled": false,
     "details": {
       "text": "Looking to completely redo with gatsby, graphQL and bootstrap"
-    }
+    },
+    "tags": ["emotion", "gatsby", "react", "typography", "rest api"]
   },
   {
     "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
@@ -30,7 +32,8 @@
     "disabled": false,
     "details": {
       "text": "Future plans include, connections to graphQL, ability to leave comments, sign in, favorite newsStories and users, search by users... so much more"
-    }
+    },
+    "tags": ["axios", "bootstrap", "rest api", "react"]
   },
   {
     "image": "https://images.unsplash.com/photo-1485389630172-dac32ee0e253?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
@@ -41,7 +44,8 @@
     "disabled": false,
     "details": {
       "text": "Automatically changes your work to markdown on preview screen. Plans include responsive design, toggle previewer, full markdown reference guide..."
-    }
+    },
+    "tags": ["firebase", "react-markdown", "styled-components", "react"]
   },
   {
     "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
@@ -52,6 +56,7 @@
     "disabled": false,
     "details": {
       "text": "to come... animation for buttons and operations being marked... for better user experience"
-    }
+    },
+    "tags": ["react", "css"]
   }
 ]
