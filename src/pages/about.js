@@ -3,12 +3,10 @@ import Layout from "../components/layout"
 import {
   Typography,
   Paper,
-  Container,
   makeStyles,
   Divider,
   Button,
 } from "@material-ui/core"
-import MaterialLink from "@material-ui/core/Link"
 import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
@@ -116,7 +114,7 @@ const About = () => {
             Firebase
           </Typography>
         </div>
-        <Typography color="textSecondary" variant="h2" color="secondary">
+        <Typography color="textSecondary" variant="h2">
           So... Why Hire Me
         </Typography>
         <Typography

@@ -1,8 +1,8 @@
-import React, { useState, useReducer, useContext } from "react"
+import React, { useContext } from "react"
 import "bootstrap/dist/css/bootstrap.css"
 import { Helmet } from "react-helmet"
 import Layout, { theme } from "../components/layout"
-import { Grid, makeStyles, CssBaseline, Paper } from "@material-ui/core"
+import { Grid, makeStyles, CssBaseline } from "@material-ui/core"
 import MediaCard from "../components/card"
 import { ThemeProvider } from "@material-ui/styles"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
@@ -37,11 +37,13 @@ export const query = graphql`
 
 export default ({ data }) => {
   const classes = useStyles()
-  const state = useContext(GlobalStateContext)
-  const searchTerm = state.searchTerm.toLowerCase()
-  const titleFilter = project =>
-    project.node.title.toLowerCase().includes(searchTerm)
-
+  const searchTermState = useContext(GlobalStateContext)
+  const searchTerm = searchTermState.searchTerm.toLowerCase()
+  const projectFilter = project =>
+    project.node.title.toLowerCase().includes(searchTerm) ||
+    project.node.tags.some(tag =>
+      tag.toLowerCase().includes(searchTermState.searchTerm.toLowerCase())
+    )
   return (
     <ThemeProvider theme={theme}>
       <Layout>
@@ -58,7 +60,7 @@ export default ({ data }) => {
             spacing={10}
           >
             {data.allCardInfoJson.edges
-              .filter(titleFilter)
+              .filter(projectFilter)
               .map((project, index) => (
                 <Grid
                   key={`${project.title}-${index}`}

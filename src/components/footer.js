@@ -4,7 +4,6 @@ import {
   makeStyles,
   Typography,
   Grid,
-  Divider,
   IconButton,
 } from "@material-ui/core"
 import TwitterIcon from "@material-ui/icons/Twitter"
@@ -28,7 +27,7 @@ const Footer = () => {
         justify="space-around"
         alignItems="center"
       >
-        <Grid item alignContent="center">
+        <Grid item>
           <Typography paragraph variant="body1" color="textPrimary">
             Phone: 720-234-5368
           </Typography>
