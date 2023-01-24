@@ -2,7 +2,7 @@
 
 Please see my [netlify site](https://jesse-portfolio-v2.netlify.app/about) for examples and details
 
-## Skills Used:
+## Tools Used:
 
 - React 
 - Gatsby
